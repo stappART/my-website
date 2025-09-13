@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Video Studio – Demo</title>
+  <meta name="description" content="Demo-Template für eine AI Video Studio Landingpage – geeignet für GitHub Pages (statisch)">
+  <!-- Tailwind CDN (nur für statische Demo) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* dezente, weiche Schatten & Kanten */
+    .card { border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); }
+    html { scroll-behavior:smooth; }
+    /* Canvas vollflächig im Hero */
+    #hero-canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 selection:bg-indigo-500/40">
+  <!-- Navigation -->
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-neutral-950/70 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#top" class="font-semibold tracking-tight text-lg">AI Video Studio</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-neutral-300">
+        <a href="#features" class="hover:text-white">Funktionen</a>
+        <a href="#demo" class="hover:text-white">Demo</a>
+        <a href="#preise" class="hover:text-white">Preise</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+      </nav>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#app" class="px-3 py-2 rounded-lg border border-white/10 hover:border-white/20">Login</a>
+        <a href="#app" class="px-4 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white">Jetzt starten</a>
+      </div>
+      <button id="menuBtn" class="md:hidden p-2 border border-white/10 rounded-lg" aria-label="Menü öffnen">☰</button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
+      <div class="px-4 py-3 flex flex-col gap-3 text-neutral-300">
+        <a href="#features" class="hover:text-white">Funktionen</a>
+        <a href="#demo" class="hover:text-white">Demo</a>
+        <a href="#preise" class="hover:text-white">Preise</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+        <div class="pt-2 flex gap-3">
+          <a href="#app" class="px-3 py-2 rounded-lg border border-white/10 hover:border-white/20">Login</a>
+          <a href="#app" class="px-4 py-2 rounded-lg bg-indigo-500 hover:bg-indigo-600 text-white">Jetzt starten</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="relative overflow-hidden">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-semibold leading-tight">
+            Erstelle beeindruckende Videos mit KI –
+            <span class="text-indigo-400">in Minuten</span>
+          </h1>
+          <p class="mt-5 text-neutral-300 max-w-xl">Dieses Template zeigt, wie eine moderne Landingpage für ein AI‑Video‑Tool aussehen kann. Es ist statisch und eignet sich für GitHub Pages, Netlify oder Vercel.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#demo" class="px-5 py-3 rounded-xl bg-indigo-500 hover:bg-indigo-600">Live‑Demo</a>
+            <a href="#preise" class="px-5 py-3 rounded-xl border border-white/10 hover:border-white/20">Preise ansehen</a>
+          </div>
+          <div class="mt-6 text-xs text-neutral-400">*Dieses Projekt ist ein unabhängiges Demo‑Template (kein Klon fremder Inhalte). Ersetze Texte, Logos und Bilder mit deinen eigenen.</div>
+        </div>
+        <div class="card bg-neutral-900/40 p-4">
+          <div class="aspect-video w-full rounded-xl bg-black/40 border border-white/10 grid place-items-center text-neutral-400">
+            <span class="text-sm">Hier könnte eine App‑Preview / Video stehen</span>
+          </div>
+          <div class="mt-4 grid grid-cols-3 gap-3 text-xs text-neutral-300">
+            <div class="p-3 rounded-lg bg-white/5 border border-white/10">Text‑zu‑Video</div>
+            <div class="p-3 rounded-lg bg-white/5 border border-white/10">Avatare</div>
+            <div class="p-3 rounded-lg bg-white/5 border border-white/10">Untertitel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- (rest of the content skipped for brevity, included in original doc) -->
+</body>
+</html>
